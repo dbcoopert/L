@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEATH NOTE</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            color: white;
+            background: linear-gradient(90deg, rgb(51, 51, 51), rgb(121, 121, 121), rgb(48, 48, 48));
+        }
+
+        .bar {
+            font-weight: bold;
+            text-align: center;
+            background-color: black;
+            padding: 20px;
+            text-transform: uppercase;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 2;
+        }
+
+        .container {
+            position: relative;
+            border-radius: 10px;
+            width: 65%;
+            margin: 80px auto;
+            padding: 2px;
+            background-color: black;
+            box-shadow: 0 0 25px 5px black;
+        }
+
+        .container img.logo {
+            width: 67px;
+            position: absolute;
+            top: -3px;
+            left: 0;
+            z-index: 1;
+            filter: contrast(0);
+            transition: 0.5s;
+        }
+
+        .container img.logo:active {
+            transform: rotate(660deg);
+        }
+
+        .sticky {
+            display: inline;
+        }
+
+        header {
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            display: flex;
+            background-color: black;
+            text-align: center;
+            position: sticky;
+            top: 8%;
+        }
+
+        header h1 {
+            font-size: 25px;
+            flex: 1;
+        }
+
+        nav {
+            background-color: black;
+            flex: 2;
+        }
+
+        nav li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        nav li a {
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            border-radius: 11px;
+            padding: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav li .light {
+            background-color: white;
+            color: rgb(0, 102, 255);
+            border-radius: 11px;
+            padding: 7px;
+        }
+
+          nav li .light:hover {
+            background-color: rgb(0, 132, 255);
+            color: white;
+          }
+
+        nav li:hover a {
+            background-color: rgb(0, 140, 255);
+            color: white;
+        }
+
+        nav li:active a {
+            color: red;
+            background-color: black;
+        }
+
+         nav li:active .light {
+            color: red;
+            background-color: black;
+         }
+        img {
+            width: 100%;
+
+        }
+
+        main {
+            display: flex;
+
+        }
+
+        main article {
+            flex: 2;
+            border: 1px solid white;
+            border-radius: 10px;
+            background-color: black;
+            padding: 10px;
+
+        }
+
+        main p {
+            font-family: cursive;
+        }
+
+        main h2,
+        h3 {
+            color: red;
+        }
+
+        main aside {
+            position: sticky;
+            top: 17.5%;
+            background-color: black;
+            text-align: center;
+            height: 60%;
+            border: 1px solid white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-left: 2px;
+            font-family: cursive;
+            transition: 0.5s;
+
+        }
+
+        main aside:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px 0 white;
+        }
+
+        aside h3 {
+            color: white;
+        }
+
+        main aside img {
+            width: 100px;
+            border-radius: 50%;
+            border: 1px solid white;
+        }
+
+        footer {
+            background-color: rgb(22, 22, 22);
+            padding: 25px;
+            text-align: center;
+            margin-top: 3px;
+            border-radius: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .container {
+                width: 70%;
+            }
+            .container img.logo {
+                width: 60px;
+            }
+
+            main {
+                flex-direction: column;
+            }
+
+            header {
+                background-color: black;
+                display: inline;
+                position: static;
+            }
+
+            header h1 {
+                background-color: black;
+
+            }
+
+            nav ul {
+                display: flex;
+                justify-content: space-evenly;
+                
+            }
+
+            nav {
+                justify-content: center;
+                display: flex;
+                font-size: 14px;
+                position: sticky;
+                top: 8.4%;
+                height: 45px;
+                z-index: 1;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            nav li a {
+                margin: 5px;
+                text-decoration: none;
+                border-radius: 15px;
+                padding: 7px;
+                font-weight: bold;
+                transition: 0.3s;
+                
+            }
+
+            main aside {
+                margin-left: 0;
+                order: -1;
+                position: relative;
+            }
+
+            main aside table {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="bar">death note</div>
+    <div class="container">
+        <div class="sticky">
+            <header>
+                <img src="img/scorpio.png" alt="scorpio" class="logo">
+                <h1>Lawliet</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#biodata">Biodata</a></li>
+                        <li><a href="#tentang">Tentang</a></li>
+                        <li><a href="#hakcipta" class="light">Hak Cipta</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <img src="img/L.jpg" alt="image" id="home">
+        <main>
+            <article id="tentang">
+                <h2>Siapa Kah L?</h2>
+                <p>
+                    Lawliet, yang juga dikenal sebagai L, adalah salah satu karakter utama dalam seri manga dan anime
+                   "Death Note" yang
+                    diciptakan oleh Tsugumi Ohba dan Takeshi Obata. Dia adalah seorang detektif jenius yang ditugaskan
+                    untuk menangkap Kira,
+                    seorang pembunuh berantai yang menggunakan catatan kematian supernatural yang disebut Death Note
+                    untuk membunuh
+                    orang-orang.
+                </p>
+
+                <p>
+                    L memiliki kepribadian yang eksentrik, sering duduk dengan posisi jongkok, dan memiliki kebiasaan
+                    makan permen secara
+                    berlebihan. Dia adalah seorang analis yang ulung, menggunakan deduksi logis untuk menemukan petunjuk
+                    dan mendekati kasus
+                    dengan cara yang unik. L memainkan peran sentral dalam upaya menangkap Kira, dan dia mengembangkan
+                    berbagai strategi
+                    canggih dalam permainan kucing dan tikus mereka.
+                </p>
+                <p>
+                    Identitas asli L, termasuk nama sebenarnya, tanggal lahir, dan latar belakangnya, selalu
+                    dirahasiakan dalam cerita,
+                    menambahkan lapisan misteri pada karakternya. Dia adalah salah satu karakter yang paling ikonik dan
+                    kompleks dalam
+                    "Death Note", dikenal karena kecerdasannya yang luar biasa, kepribadian eksentriknya, dan
+                    dedikasinya yang tak kenal
+                    lelah untuk menegakkan keadilan.
+                </p>
+                <section>
+                    <h3>Keunikan</h3>
+                    <p>Kecerdasannya tercermin dalam kemampuannya untuk melakukan analisis yang mendalam terhadap setiap
+                        kasus yang dia hadapi.
+                        Dia memiliki kemampuan deduktif yang kuat, mampu menghubungkan petunjuk-petunjuk kecil untuk
+                        mencapai kesimpulan yang
+                        akurat. Selain itu, Lawliet terkenal karena pemecahan kasusnya yang canggih, sering kali
+                        menemukan
+                        solusi yang tidak
+                        terduga bahkan dalam situasi yang paling rumit sekalipun. Pendekatan strategisnya yang terencana
+                        dengan baik
+                        memungkinkannya untuk selangkah lebih maju dalam menangani kasus-kasus tersebut. Lawliet juga
+                        memiliki kepekaan yang
+                        tinggi terhadap detail-detail kecil yang mungkin terlewatkan oleh orang lain, memungkinkannya
+                        untuk
+                        melihat pola-pola
+                        yang tersembunyi di balik bukti-bukti. Yang lebih penting lagi, dia tidak takut untuk berpikir
+                        di
+                        luar kotak, sering
+                        kali mengambil pendekatan yang tidak konvensional dalam memecahkan masalah. Kecerdasan Lawliet
+                        adalah atribut yang
+                        sangat membedakan dan membedakan karakternya, menjadikannya salah satu detektif yang paling
+                        dihormati dalam dunia "Death
+                        Note".</p>
+                </section>
+                <section>
+                    <h3>Kecerdasan yang Luar Biasa</h3>
+                    <p>L adalah detektif jenius dengan kemampuan deduktif yang luar biasa. Dia mampu membuat analisis
+                        yang mendalam dan
+                        menghubungkan petunjuk-petunjuk yang kompleks untuk menemukan kebenaran dalam kasus-kasus yang
+                        sulit.</p>
+                </section>
+                <section>
+                    <h3>Kepribadian Eksentrik</h3>
+                    <p>
+                        Lawliet memiliki kepribadian yang eksentrik dan aneh. Dia sering ditemukan duduk dengan posisi
+                        jongkok, jarang
+                        menunjukkan wajahnya, dan memiliki kebiasaan makan permen secara berlebihan. Kepribadiannya yang
+                        unik dan tidak biasa
+                        menambah daya tarik karakternya.
+                    </p>
+                </section>
+                <section>
+                    <h3>Misteri Identitas</h3>
+                    <p>
+                        Identitas asli Lawliet, termasuk nama sebenarnya, tanggal lahir, dan latar belakangnya, selalu
+                        dirahasiakan dalam
+                        cerita. Ini menciptakan aura misteri yang menyelimuti karakternya dan meningkatkan ketertarikan
+                        penonton.
+                    </p>
+                </section>
+                <section>
+                    <h3>Obsesi Dengan Keadilan</h3>
+                    <p>
+                        Meskipun Lawliet mungkin terlihat dingin dan kalkulatif, dia memiliki obsesi yang mendalam
+                        dengan keadilan. Dia bersedia
+                        melakukan apa pun untuk menangkap penjahat dan menegakkan hukum, bahkan jika itu berarti
+                        mengambil risiko besar atau
+                        melanggar aturan.
+                    </p>
+                </section>
+                <section>
+                    <h3>Pendekatan yang Tidak Konvensional</h3>
+                    <p>
+                        L sering mengambil pendekatan yang tidak konvensional dalam memecahkan
+                        kasus-kasusnya. Dia tidak segan untuk menggunakan taktik yang kontroversial atau melanggar
+                        aturan agar bisa mendapatkan
+                        hasil yang diinginkannya.
+                    </p>
+                </section>
+                <section>
+                    <h3>Hubungan dengan Watari</h3>
+                    <p>
+                        Lawliet memiliki hubungan yang dekat dengan asistennya, Watari, yang membantunya dalam berbagai
+                        hal, mulai dari penyediaan informasi hingga memberikan dukungan moral. Hubungan ini menunjukkan
+                        sisi lebih manusiawi
+                        dari karakternya.
+                    </p>
+                    <p>Kombinasi dari kecerdasan luar biasa, kepribadian eksentrik, misteri identitas, dan obsesi dengan
+                        keadilan menjadikan Lawliet sebagai salah satu karakter yang paling menarik dan ikonik dalam
+                        "Death Note".</p>
+                </section>
+            </article>
+            <aside id="biodata">
+                <img src="img/Lawliet-Profile.jpg" alt="">
+                <h3>Profile</h3>
+                <table>
+                    <tr>
+                        <th>Nama :</th>
+                        <td>L Lawliet</td>
+                    </tr>
+                    <tr>
+                        <th>Lahir :</th>
+                        <td>31 Oktober 1979</td>
+                    </tr>
+                    <tr>
+                        <th>Asal :</th>
+                        <td>Inggris</td>
+                    </tr>
+                    <tr>
+                        <th>Asisten :</th>
+                        <td>Watari</td>
+                    </tr>
+                    <tr>
+                        <th>Zodiak :</th>
+                        <td>Scorpio</td>
+                    </tr>
+                    <tr>
+                        <th>Kesukaan :</th>
+                        <td>Permen</td>
+                    </tr>
+                </table>
+            </aside>
+        </main>
+
+        <footer id="hakcipta">Asep &#169; 2024, Sukabumi</footer>
+    </div>
+</body>
+
+</html>
