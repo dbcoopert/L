@@ -5,9 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DEATH NOTE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 
     <style>
         body {
+            font-family: "Varela Round", sans-serif;
+            font-weight: 400;
+            font-style: normal;
             margin: 0;
             padding: 0;
             color: white;
@@ -62,7 +68,7 @@
             background-color: black;
             text-align: center;
             position: sticky;
-            top: 8%;
+            top: 6.7%;
         }
 
         header h1 {
@@ -83,12 +89,11 @@
 
         nav ul {
             display: flex;
-            justify-content: space-evenly;
+            justify-content:space-around;
             align-items: center;
         }
 
         nav li a {
-            font-family: Arial, Helvetica, sans-serif;
             text-decoration: none;
             border-radius: 11px;
             padding: 5px;
@@ -100,13 +105,13 @@
             background-color: white;
             color: rgb(0, 102, 255);
             border-radius: 11px;
-            padding: 7px;
+            padding: 6px;
         }
 
-          nav li .light:hover {
+        nav li .light:hover {
             background-color: rgb(0, 132, 255);
             color: white;
-          }
+        }
 
         nav li:hover a {
             background-color: rgb(0, 140, 255);
@@ -118,10 +123,11 @@
             background-color: black;
         }
 
-         nav li:active .light {
+        nav li:active .light {
             color: red;
             background-color: black;
-         }
+        }
+
         img {
             width: 100%;
 
@@ -141,9 +147,9 @@
 
         }
 
-        main p {
+        /* main p {
             font-family: cursive;
-        }
+        } */
 
         main h2,
         h3 {
@@ -160,7 +166,7 @@
             padding: 15px;
             border-radius: 10px;
             margin-left: 2px;
-            font-family: cursive;
+            /* font-family: cursive; */
             transition: 0.5s;
 
         }
@@ -188,11 +194,13 @@
             border-radius: 10px;
         }
 
-        @media screen and (max-width: 768px) {
+
+        @media screen and (max-width: 668px) {
 
             .container {
-                width: 70%;
+                width: 90%;
             }
+
             .container img.logo {
                 width: 60px;
             }
@@ -215,7 +223,7 @@
             nav ul {
                 display: flex;
                 justify-content: space-evenly;
-                
+
             }
 
             nav {
@@ -232,6 +240,10 @@
                 width: 100%;
             }
 
+            nav ul {
+                gap: 2rem;
+            }
+
             nav li a {
                 margin: 5px;
                 text-decoration: none;
@@ -239,7 +251,7 @@
                 padding: 7px;
                 font-weight: bold;
                 transition: 0.3s;
-                
+
             }
 
             main aside {
@@ -280,7 +292,7 @@
                 <h2>Siapa Kah L?</h2>
                 <p>
                     Lawliet, yang juga dikenal sebagai L, adalah salah satu karakter utama dalam seri manga dan anime
-                   "Death Note" yang
+                    "Death Note" yang
                     diciptakan oleh Tsugumi Ohba dan Takeshi Obata. Dia adalah seorang detektif jenius yang ditugaskan
                     untuk menangkap Kira,
                     seorang pembunuh berantai yang menggunakan catatan kematian supernatural yang disebut Death Note
